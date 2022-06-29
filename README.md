@@ -39,7 +39,9 @@ The column number that will remain in the csv (at the moment only one column alo
     
 # Usage
 
-With the following file configuration and the following inputs, it will output (on the same exe location as "output.csv") the value of the "colum2".
+With the following file configuration and the following inputs, it will output (in the same the working directory as `output.csv`) the value of the `column2`.
+
+**Input**
 
 ```csv
 column0,column1,column2
@@ -48,8 +50,12 @@ column0,column1,column2
 0000000,1111111,2222222
 ```
 
+**Command**
+
     go run main.go -csv="input.csv" -column=2
-    
+
+**Output**
+
 ```csv
 column2
 2222222
