@@ -43,6 +43,8 @@ func main() {
 	// read the csv using csv.Reader
 	csvReader := csv.NewReader(file)
 	csvReader.FieldsPerRecord = -1
+	csvReader.Comma = ';'
+	csvReader.LazyQuotes = true
 	data, err := csvReader.ReadAll()
 	if err != nil {
 		exit("Failed to parse the data of the CSV file: " + err.Error())
