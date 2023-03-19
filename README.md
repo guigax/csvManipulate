@@ -1,27 +1,18 @@
 # csvManipulate
 
-A CLI to read a csv, remove all but one column, that is passed via flag.
+A CLI to read a csv, remove all but one column, that is parameterized via flag.
 
 # Requirements
 
 [Go 1.18+](https://go.dev/dl/)
 
-# Run
+# Build
 
-Execute the `go run` command
-
-    go run main.go
-
-You can also build and execute the code with:
-
-OS | Command
---- | --- 
-Windows | `go build main.go && main.exe`
-Linux | `go build main.go && ./main`
+    go build
 
 It accepts command-line arguments, listed by: 
 
-    go run main.go --help
+    csvManipulate --help
     
 # Features
 
@@ -52,7 +43,7 @@ column0,column1,column2
 
 **Command**
 
-    go run main.go -csv="input.csv" -column=2
+    csvManipulate -csv="input.csv" -column=2
 
 **Output**
 
